@@ -1,0 +1,27 @@
+﻿@model TodoTask
+
+
+@{
+    ViewData["Tittle"] = "Create page";
+}
+
+
+<form asp-action="Create">
+    <fieldset>
+        <h2>Add New Content</h2> 
+        <div class="form-group">
+            <label asp-for="Content" class="form-label mt-4"></label>
+            <input asp-for="Content" id="exampleTodoList" aria-describedby="Todo list help" placeholder="Enter Task">
+            <small id="TodoHelp" class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+            <label asp-for="Date" class="form-label mt-4"></label>
+            <input type="date" asp-for="Date" id="exampleTodoList" aria-describedby="Todo list help" placeholder="Enter Task">
+            <small id="dateHelp" class="form-text text-muted"></small>
+        </div>
+    </fieldset>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-action="Index">Save Todo</a>
+    </div>
+</form>
